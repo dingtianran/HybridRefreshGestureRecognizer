@@ -56,9 +56,6 @@ NSString * const PHRefreshResetGestureAnimationKey  = @"PHRefreshResetGestureAni
         
         switch (refreshState) {
             case PHRefreshTriggered:
-//                if (![self.triggerView.arrowView.layer animationForKey:PHRefreshGestureAnimationKey]) {
-//                    [self.triggerView.arrowView.layer addAnimation:[self triggeredAnimation] forKey:PHRefreshGestureAnimationKey];
-//                }
                 self.triggerView.titleLabel.text = NSLocalizedString(@"Release...", @"PHRefreshTriggerView Triggered");                
                 break;
             case PHRefreshIdle:
@@ -71,15 +68,9 @@ NSString * const PHRefreshResetGestureAnimationKey  = @"PHRefreshResetGestureAni
                                                                     self.scrollView.contentInset.right);
                     }];
                     
-//                    [self.triggerView.arrowView.layer removeAllAnimations];
-//                    [self.triggerView.activityView removeFromSuperview];
-//                    [self.triggerView.activityView stopAnimating];
-//                    [self.triggerView addSubview:self.triggerView.arrowView];
 
                 } else if (self->_refreshState == PHRefreshTriggered) {
-//                    if ([self.triggerView.arrowView.layer animationForKey:PHRefreshGestureAnimationKey]) {
-//                        [self.triggerView.arrowView.layer addAnimation:[self idlingAnimation] forKey:PHRefreshResetGestureAnimationKey];
-//                    }
+
                 }
                 
                 self.triggerView.titleLabel.text = NSLocalizedString(@"Pull to refresh...", @"PHRefreshTriggerView default");
@@ -92,10 +83,7 @@ NSString * const PHRefreshResetGestureAnimationKey  = @"PHRefreshResetGestureAni
                                                                 self.scrollView.contentInset.right);
                 }];
                 self.triggerView.titleLabel.text = NSLocalizedString(@"Loading...", @"PHRefreshTriggerView loading");
-//                [self.triggerView.arrowView removeFromSuperview];
-//                [self.triggerView addSubview:self.triggerView.activityView];
-//                [self.triggerView.activityView startAnimating];
-                
+
                 break;
         }
         
@@ -203,7 +191,6 @@ NSString * const PHRefreshResetGestureAnimationKey  = @"PHRefreshResetGestureAni
 
 #pragma mark - CAAnimation Delegate
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-//    [self.triggerView.arrowView.layer removeAllAnimations];
     [self.triggerView.spin stopInfiniteAnimation];
 }
 

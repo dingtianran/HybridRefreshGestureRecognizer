@@ -1,9 +1,9 @@
 //
-//  Circle.h
+//  RefreshSpin.h
 //  Refresh
 //
 //  Created by tianran DING on 12-3-5.
-//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012年 dingtr. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
