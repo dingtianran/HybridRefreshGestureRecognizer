@@ -1,5 +1,7 @@
+![Screenshot: Launch image](https://github.com/dingtianran/HybridRefreshGestureRecognizer/raw/master/Screenshot.jpg)
 # Description
 =============
+
 It's a clone of Tweetbot's progress activity indicator in the "pull to refresh" view.
 
 It uses recognizer instead of the UIScrollView delegate to manage itself.
