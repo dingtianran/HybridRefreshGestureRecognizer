@@ -16,12 +16,14 @@ You have to drag the .h and .m files that are located in folder PHRefreshGesture
 To use it in your project, import it first:
 
 ```
-#import "PHRefreshGestureRecognizer"
+#import "PHRefreshGestureRecognizer.h"
 ```
 then use it like this, attach it to an UIScrollView or UITableView as an UIGestureRecognizer:
 
 ```
-[_tableView addGestureRecognizer:[[[PHRefreshGestureRecognizer alloc] initWithTarget:self action:@selector(stateChanged:)] autorelease]];
+[_tableView addGestureRecognizer:[[[PHRefreshGestureRecognizer alloc] 
+initWithTarget:self 
+action:@selector(stateChanged:)] autorelease]];
 ```
 
 changes to the contentOffset of UIScrollView will pull the refresh trigger.
