@@ -50,7 +50,9 @@
         return;
     }
     self.infinite = YES;
-    infiniteTimer = [NSTimer scheduledTimerWithTimeInterval:0.04 target:self selector:@selector(infiniteTimer:) userInfo:nil repeats:YES];
+    //schedule the timer in common mode will not get the animation blocked while scrolling.
+    infiniteTimer = [NSTimer timerWithTimeInterval:0.04 target:self selector:@selector(infiniteTimer:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:infiniteTimer forMode:NSRunLoopCommonModes];
     
 }
 
